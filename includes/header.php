@@ -65,9 +65,9 @@
                                 Charts
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="crud/chart_by_author.php">by Author</a></li>
-                                <li><a class="dropdown-item" href="crud/chart_by_category.php">by Category</a></li>
-                                <li><a class="dropdown-item" href="crud/chart_by_tag.php">by Tag</a></li>
+                                <li><a class="dropdown-item" href="chart_by_author.php">by Author</a></li>
+                                <li><a class="dropdown-item" href="chart_by_category.php">by Category</a></li>
+                                <li><a class="dropdown-item" href="chart_by_tag.php">by Tag</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
