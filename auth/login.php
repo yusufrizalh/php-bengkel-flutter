@@ -77,6 +77,8 @@ try {
                 $_SESSION['email'] = $user['email'];
                 $_SESSION['address'] = $user['address'];
                 $_SESSION['phone'] = $user['phone'];
+                $_SESSION['token'] = $token;
+                $_SESSION['loggedin'] = true;
 
                 session_regenerate_id(true);
 

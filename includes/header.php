@@ -82,17 +82,38 @@
                             </a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                User Area
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="auth/register_form.php">Register</a></li>
-                                <li><a class="dropdown-item" href="auth/login_form.php">Login</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+
+                    <?php
+                    if ($_SESSION['loggedin']) {
+                    ?>
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    User Area
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="">Profile</a></li>
+                                    <li><a class="dropdown-item" href="">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    <?php
+                    } else {
+                    ?>
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    User Area
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="auth/register_form.php">Register</a></li>
+                                    <li><a class="dropdown-item" href="auth/login_form.php">Login</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    <?php
+                    }
+                    ?>
                 </div>
         </div>
         </nav>
