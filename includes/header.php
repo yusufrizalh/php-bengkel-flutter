@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="Refresh" content="2; url=register_form.php"> -->
     <title>Bengkel Flutter</title>
     <link rel="icon" href="https://i.ibb.co/xtgVFHyg/Rizal-Studio-Logo.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -88,7 +89,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="auth/register_form.php">Register</a></li>
-                                <li><a class="dropdown-item" href="#">Login</a></li>
+                                <li><a class="dropdown-item" href="auth/login_form.php">Login</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -136,6 +137,3 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-</body>
-
-</html>

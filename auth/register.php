@@ -1,5 +1,5 @@
 <?php
-include '../config/header.php';
+// include '../config/header.php';
 include '../config/koneksi.php';
 
 $response = ['success' => false, 'message' => ''];
@@ -122,4 +122,5 @@ try {
     $conn = null;
 }
 
-echo json_encode($response);
+//* only for development purpose
+// echo json_encode($response);
