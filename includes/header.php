@@ -87,7 +87,7 @@
                                 User Area
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Register</a></li>
+                                <li><a class="dropdown-item" href="auth/register_form.php">Register</a></li>
                                 <li><a class="dropdown-item" href="#">Login</a></li>
                             </ul>
                         </li>
