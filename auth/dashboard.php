@@ -1,5 +1,4 @@
 <?php
-session_start();
 if (!isset($_SESSION['loggedin'])) {
     header('Location: login_form.php');
     exit;
@@ -21,7 +20,7 @@ if (!isset($_SESSION['loggedin'])) {
             <div class="card shadow">
                 <div class="card-header bg-danger">
                     <h3 class="fw-bold text-white">
-                        Dashboard
+                        Admin Dashboard
                     </h3>
                 </div>
                 <div class="card-body">

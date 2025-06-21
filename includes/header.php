@@ -44,47 +44,84 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link text-white active" aria-current="page" href="index.php">
-                                Beranda
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Tutorials
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">JavaScript</a></li>
-                                <li><a class="dropdown-item" href="#">Flutter</a></li>
-                                <li><a class="dropdown-item" href="#">React Native</a></li>
-                                <li><a class="dropdown-item" href="#">Framework7</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Charts
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="chart_by_author.php">by Author</a></li>
-                                <li><a class="dropdown-item" href="chart_by_category.php">by Category</a></li>
-                                <li><a class="dropdown-item" href="chart_by_tag.php">by Tag</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">
-                                About
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-
                     <?php
-                    if ($_SESSION['loggedin']) {
+                    session_start();
+                    if (isset($_SESSION['loggedin'])) {
+                    ?>
+                        <!-- admin navbar -->
+                        <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link text-white active" aria-current="page" href="index.php">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Manage
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Users</a></li>
+                                    <li><a class="dropdown-item" href="#">Authors</a></li>
+                                    <li><a class="dropdown-item" href="#">Articles Native</a></li>
+                                    <li><a class="dropdown-item" href="#">Categories</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Charts
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="chart_by_author.php">by Author</a></li>
+                                    <li><a class="dropdown-item" href="chart_by_category.php">by Category</a></li>
+                                    <li><a class="dropdown-item" href="chart_by_tag.php">by Tag</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    <?php
+                    } else {
+                    ?>
+                        <!-- guest navbar -->
+                        <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link text-white active" aria-current="page" href="index.php">
+                                    Beranda
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Tutorials
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                                    <li><a class="dropdown-item" href="#">Flutter</a></li>
+                                    <li><a class="dropdown-item" href="#">React Native</a></li>
+                                    <li><a class="dropdown-item" href="#">Framework7</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Charts
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="chart_by_author.php">by Author</a></li>
+                                    <li><a class="dropdown-item" href="chart_by_category.php">by Category</a></li>
+                                    <li><a class="dropdown-item" href="chart_by_tag.php">by Tag</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">
+                                    About
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    <?php
+                    }
+                    ?>
+                    <?php
+                    if (isset($_SESSION['loggedin'])) {
                     ?>
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item dropdown">
@@ -93,7 +130,7 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="">Profile</a></li>
-                                    <li><a class="dropdown-item" href="">Logout</a></li>
+                                    <li><a class="dropdown-item" href="../auth/logout.php">Logout</a></li>
                                 </ul>
                             </li>
                         </ul>
