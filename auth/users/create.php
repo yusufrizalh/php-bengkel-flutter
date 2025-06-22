@@ -31,30 +31,44 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </h3>
                 </div>
                 <div class="card-body">
+                    <?php if (!empty($errors)): ?>
+                        <div class="alert alert-danger">
+                            <ul>
+                                <?php foreach ($errors as $error): ?>
+                                    <li><?= htmlspecialchars($error); ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (isset($response) && $response['success'] == true): ?>
+                        <div class="alert alert-success">
+                            <?= htmlspecialchars($response['message']); ?>
+                        </div>
+                    <?php endif; ?>
                     <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" enctype="multipart/form-data">
                         <div class="mb-3 form-group">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" value="<?= htmlspecialchars($_POST['name'] ?? ''); ?>" autocomplete="off" required>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" value="<?= htmlspecialchars($_POST['name'] ?? ''); ?>" autocomplete="off">
                         </div>
                         <div class="mb-3 form-group">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" value="<?= htmlspecialchars($_POST['email'] ?? ''); ?>" autocomplete="off" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" value="<?= htmlspecialchars($_POST['email'] ?? ''); ?>" autocomplete="off">
                         </div>
                         <div class="mb-3 form-group">
                             <label for="password" class="form-label">Password</label>
-                            <input type="text" class="form-control" id="password" name="password" placeholder="Enter your password" value="<?= htmlspecialchars($_POST['password'] ?? ''); ?>" autocomplete="off" required>
+                            <input type="text" class="form-control" id="password" name="password" placeholder="Enter your password" value="<?= htmlspecialchars($_POST['password'] ?? ''); ?>" autocomplete="off">
                         </div>
                         <div class="mb-3 form-group">
                             <label for="phone" class="form-label">Phone</label>
-                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" value="<?= htmlspecialchars($_POST['phone'] ?? ''); ?>" autocomplete="off" required>
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" value="<?= htmlspecialchars($_POST['phone'] ?? ''); ?>" autocomplete="off">
                         </div>
                         <div class="mb-3 form-group">
                             <label for="address" class="form-label">Address</label>
-                            <textarea class="form-control" id="address" rows="3" name="address" placeholder="Enter your address" autocomplete="off" required><?= htmlspecialchars($_POST['address'] ?? ''); ?></textarea>
+                            <textarea class="form-control" id="address" rows="3" name="address" placeholder="Enter your address" autocomplete="off"><?= htmlspecialchars($_POST['address'] ?? ''); ?></textarea>
                         </div>
                         <div class="mb-3 form-group">
                             <label for="role" class="form-label">Role</label>
-                            <select class="form-control" id="role" name="role" required>
+                            <select class="form-control" id="role" name="role">
                                 <option value="admin">Admin</option>
                                 <option value="user" selected>User</option>
                             </select>

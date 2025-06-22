@@ -126,4 +126,4 @@ try {
 }
 
 //* only for development purpose
-echo json_encode($response);
+// echo json_encode($response);
