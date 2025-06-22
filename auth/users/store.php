@@ -99,9 +99,6 @@ try {
                     'role' => $data['role'],
                     'token' => $token,
                 ];
-
-                header('Location: index.php');
-                exit();
             } else {
                 $response = [
                     'success' => false,
