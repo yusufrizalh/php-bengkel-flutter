@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta http-equiv="Refresh" content="2; url=register_form.php"> -->
     <title>Bengkel Flutter</title>
     <link rel="icon" href="https://i.ibb.co/xtgVFHyg/Rizal-Studio-Logo.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -45,7 +44,6 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <?php
-                    session_start();
                     if (isset($_SESSION['loggedin'])) {
                     ?>
                         <!-- admin navbar -->
