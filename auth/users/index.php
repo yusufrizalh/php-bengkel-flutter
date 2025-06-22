@@ -20,10 +20,9 @@ if (!isset($_SESSION['loggedin'])) {
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card shadow">
-                    <div class="card-header bg-danger text-center">
-                        <h3 class="fw-bold text-white">
-                            User List
-                        </h3>
+                    <div class="card-header bg-danger d-flex justify-content-between">
+                        <h3 class="fw-bold text-white">User List</h3>
+                        <a href="create.php" class="btn btn-outline-light">Create New User</a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive-sm">
