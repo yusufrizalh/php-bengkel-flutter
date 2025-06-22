@@ -68,6 +68,7 @@ try {
                     'email' => $user['email'],
                     'address' => $user['address'],
                     'phone' => $user['phone'],
+                    'photo' => $user['photo'],
                     'token' => $token,
                 ];
 
@@ -77,6 +78,7 @@ try {
                 $_SESSION['email'] = $user['email'];
                 $_SESSION['address'] = $user['address'];
                 $_SESSION['phone'] = $user['phone'];
+                $_SESSION['photo'] = $user['photo'];
                 $_SESSION['token'] = $token;
                 $_SESSION['loggedin'] = true;
 

@@ -25,18 +25,13 @@ if (!isset($_SESSION['loggedin'])) {
                             </h3>
                         </div>
                         <div class="card-body">
-                            <p>
-                                <b>Name:</b> <?= $_SESSION['name']; ?>
-                            </p>
-                            <p>
-                                <b>Email:</b> <?= $_SESSION['email']; ?>
-                            </p>
-                            <p>
-                                <b>Address:</b> <?= $_SESSION['address']; ?>
-                            </p>
-                            <p>
-                                <b>Phone:</b> <?= $_SESSION['phone']; ?>
-                            </p>
+                            <span">
+                                <img src="<?= $_SESSION['photo']; ?>" alt="profile-pic" class="img-fluid img-thumbnail rounded-circle mx-auto d-block" style="width: 250px; height: 250px">
+                                </span>
+                                <p><b>Name:</b> <?= $_SESSION['name']; ?></p>
+                                <p><b>Email:</b> <?= $_SESSION['email']; ?></p>
+                                <p><b>Address:</b> <?= $_SESSION['address']; ?></p>
+                                <p><b>Phone:</b> <?= $_SESSION['phone']; ?></p>
                         </div>
                     </div>
                 </div>
