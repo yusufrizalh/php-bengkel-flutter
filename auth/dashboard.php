@@ -26,7 +26,7 @@ if (!isset($_SESSION['loggedin'])) {
                         </div>
                         <div class="card-body">
                             <span">
-                                <img src="<?= $_SESSION['photo']; ?>" alt="profile-pic" class="img-fluid img-thumbnail rounded-circle mx-auto d-block" style="width: 250px; height: 250px">
+                                <img src="<?php echo $_SESSION['photo']; ?>" alt="profile-pic" class="img-fluid img-thumbnail rounded-circle mx-auto d-block" style="width: 250px; height: 250px">
                                 </span>
                                 <p><b>Name:</b> <?= $_SESSION['name']; ?></p>
                                 <p><b>Email:</b> <?= $_SESSION['email']; ?></p>

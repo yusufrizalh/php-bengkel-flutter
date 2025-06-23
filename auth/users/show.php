@@ -39,7 +39,7 @@ if (!isset($_SESSION['loggedin'])) {
                     </h3>
                 </div>
                 <div class="card-body">
-                    <img src="<?= $user['photo']; ?>" alt="profile-pic" class="img-fluid img-thumbnail rounded-circle mx-auto mb-3 d-block" style="width: 250px; height: 250px">
+                    <img src="uploads/<?= $user['photo']; ?>" alt="profile-pic" class="img-fluid img-thumbnail rounded-circle mx-auto mb-3 d-block" style="width: 250px; height: 250px">
                     <h5 class="card-title">
                         <b>Name:</b> <?= $user['name']; ?>
                     </h5>
