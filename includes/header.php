@@ -79,7 +79,7 @@
                         <!-- guest navbar -->
                         <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link text-white active" aria-current="page" href="index.php">
+                                <a class="nav-link text-white active" aria-current="page" href="http://localhost/blog/index.php">
                                     Beranda
                                 </a>
                             </li>
@@ -99,18 +99,18 @@
                                     Charts
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="chart_by_author.php">by Author</a></li>
-                                    <li><a class="dropdown-item" href="chart_by_category.php">by Category</a></li>
-                                    <li><a class="dropdown-item" href="chart_by_tag.php">by Tag</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/blog/crud/chart_by_author.php">by Author</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/blog/crud/chart_by_category.php">by Category</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/blog/crud/chart_by_tag.php">by Tag</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#">
+                                <a class="nav-link text-white" href="http://localhost/blog/about.php">
                                     About
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#">
+                                <a class="nav-link text-white" href="http://localhost/blog/contact.php">
                                     Contact
                                 </a>
                             </li>
