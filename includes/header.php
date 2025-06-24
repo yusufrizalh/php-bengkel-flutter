@@ -49,29 +49,29 @@
                         <!-- admin navbar -->
                         <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link text-white active" aria-current="page" href="index.php">Home</a>
+                                <a class="nav-link text-white active" aria-current="page" href="http://localhost/blog/auth/dashboard.php">Dashboard</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Manage
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Users</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/blog/auth/users/index.php">Users</a></li>
                                     <li><a class="dropdown-item" href="#">Authors</a></li>
                                     <li><a class="dropdown-item" href="#">Articles Native</a></li>
                                     <li><a class="dropdown-item" href="#">Categories</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
+                            <!-- <li class="nav-item dropdown">
                                 <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Charts
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="chart_by_author.php">by Author</a></li>
-                                    <li><a class="dropdown-item" href="chart_by_category.php">by Category</a></li>
-                                    <li><a class="dropdown-item" href="chart_by_tag.php">by Tag</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/blog/crud/chart_by_author.php">by Author</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/blog/crud/chart_by_category.php">by Category</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/blog/crud/chart_by_tag.php">by Tag</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
                         </ul>
                     <?php
                     } else {
@@ -80,7 +80,7 @@
                         <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link text-white active" aria-current="page" href="http://localhost/blog/index.php">
-                                    Beranda
+                                    Home
                                 </a>
                             </li>
                             <li class="nav-item dropdown">
@@ -128,7 +128,7 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="">Profile</a></li>
-                                    <li><a class="dropdown-item" href="../auth/logout.php">Logout</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/blog/auth/logout.php">Logout</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -141,8 +141,8 @@
                                     User Area
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="auth/register_form.php">Register</a></li>
-                                    <li><a class="dropdown-item" href="auth/login_form.php">Login</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/blog/auth/register_form.php">Register</a></li>
+                                    <li><a class="dropdown-item" href="http://localhost/blog/auth/login_form.php">Login</a></li>
                                 </ul>
                             </li>
                         </ul>
